@@ -24,6 +24,16 @@ The React SDK for modern apps — hooks, AI, forms, analytics, and auth in one t
 | [`@allem-sdk/analytics`](./packages/analytics) | Provider-agnostic analytics hooks | `npm i @allem-sdk/analytics` |
 | [`@allem-sdk/auth`](./packages/auth) | Authentication helpers (session, protected routes) | `npm i @allem-sdk/auth` |
 
+## Build with AI Agents
+
+Allem SDK ships with a skill that teaches AI coding agents the full API — hooks, patterns, and best practices. Install it once and let Claude Code, Cursor, Codex, or any skills-compatible agent build with Allem SDK for you.
+
+```bash
+npx skills add kingofmit/allem-sdk
+```
+
+The agent gets complete coverage of all 5 packages, so it knows how to wire up providers, compose hooks, validate forms, and set up auth — without you having to explain the API.
+
 ## Quick Start
 
 ### Hooks
