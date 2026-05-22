@@ -1,0 +1,86 @@
+{
+  "name": "@allem-sdk/ai",
+  "version": "0.0.1",
+  "description": "AI hooks for React — useChat, useAgent, useStreaming. Built on Vercel AI SDK.",
+  "license": "MIT",
+  "author": "Ahmed Allem",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.mjs",
+      "require": "./dist/client.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.mjs",
+      "require": "./dist/server.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@ai-sdk/anthropic": "^3.0.78",
+    "@ai-sdk/google": "^3.0.75",
+    "@ai-sdk/openai": "^3.0.64",
+    "@ai-sdk/react": "^3.0.187",
+    "@types/react": "^19.0.0",
+    "ai": "^6.0.185",
+    "react": "^19.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@ai-sdk/anthropic": ">=3.0.0",
+    "@ai-sdk/google": ">=3.0.0",
+    "@ai-sdk/openai": ">=3.0.0",
+    "@ai-sdk/react": ">=3.0.0",
+    "ai": ">=6.0.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@ai-sdk/google": {
+      "optional": true
+    },
+    "@ai-sdk/anthropic": {
+      "optional": true
+    },
+    "@ai-sdk/openai": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingofmit/allem-sdk.git",
+    "directory": "packages/ai"
+  },
+  "keywords": [
+    "allem-sdk",
+    "ai",
+    "react",
+    "hooks",
+    "useChat",
+    "useAgent",
+    "vercel-ai-sdk",
+    "llm"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

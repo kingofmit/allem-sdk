@@ -1,0 +1,32 @@
+{
+  "name": "allem-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Developer SDK for React — AI hooks, form management, analytics, and more.",
+  "author": "Ahmed Allem <ahmed@allzem.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingofmit/allem-sdk.git"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build && changeset publish",
+    "example:dev": "turbo dev --filter=example-nextjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "turbo": "^2.4.0",
+    "typescript": "^5.8.0"
+  }
+}
