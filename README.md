@@ -11,13 +11,13 @@
   <img src="https://img.shields.io/badge/tests-44_passing-brightgreen" alt="Tests" />
 </p>
 
-The React SDK for modern apps — hooks, AI, forms, analytics, and auth in one toolkit.
+The React SDK for modern apps. Hooks, AI, forms, analytics, and auth in one toolkit.
 
 ## Packages
 
 | Package | Description | Install |
 |---------|-------------|---------|
-| [`allem-sdk`](./packages/allem-sdk) | Meta-package — installs everything | `npm i allem-sdk` |
+| [`allem-sdk`](./packages/allem-sdk) | Meta-package that installs everything | `npm i allem-sdk` |
 | [`@allem-sdk/hooks`](./packages/hooks) | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | `npm i @allem-sdk/hooks` |
 | [`@allem-sdk/ai`](./packages/ai) | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | `npm i @allem-sdk/ai` |
 | [`@allem-sdk/forms`](./packages/forms) | Lightweight form management and validation | `npm i @allem-sdk/forms` |
@@ -26,13 +26,13 @@ The React SDK for modern apps — hooks, AI, forms, analytics, and auth in one t
 
 ## Build with AI Agents
 
-Allem SDK ships with a skill that teaches AI coding agents the full API — hooks, patterns, and best practices. Install it once and let Claude Code, Cursor, Codex, or any skills-compatible agent build with Allem SDK for you.
+Allem SDK ships with a skill that teaches AI coding agents the full API, including hooks, patterns, and best practices. Install it once and let Claude Code, Cursor, Codex, or any skills-compatible agent build with Allem SDK for you.
 
 ```bash
 npx skills add kingofmit/allem-sdk
 ```
 
-The agent gets complete coverage of all 5 packages, so it knows how to wire up providers, compose hooks, validate forms, and set up auth — without you having to explain the API.
+The agent gets complete coverage of all 5 packages, so it knows how to wire up providers, compose hooks, validate forms, and set up auth without you having to explain the API.
 
 ## Quick Start
 
@@ -145,7 +145,7 @@ function App() {
 
 ## Example App
 
-The [`apps/examples/nextjs`](./apps/examples/nextjs) directory contains a full Next.js 15 app demonstrating all 5 packages working together — interactive hook demos, AI chat, form validation, auth flow with protected routes, and a multi-widget dashboard.
+The [`apps/examples/nextjs`](./apps/examples/nextjs) directory contains a full Next.js 16 app demonstrating all 5 packages working together: interactive hook demos, AI chat, form validation, auth flow with protected routes, and a multi-widget dashboard.
 
 ```bash
 pnpm example:dev
