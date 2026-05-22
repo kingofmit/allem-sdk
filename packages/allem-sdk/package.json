@@ -1,6 +1,6 @@
 {
   "name": "allem-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The complete Allem SDK — hooks, AI, forms, analytics, and auth for React",
   "license": "MIT",
   "author": "Ahmed Allem (https://kingallem.com)",

@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/kingofmit/allem-sdk/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
-  <img src="https://img.shields.io/badge/react-18+-61dafb" alt="React 18+" />
+  <img src="https://img.shields.io/badge/react-19-61dafb" alt="React 19" />
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
   <img src="https://img.shields.io/badge/SSR-safe-brightgreen" alt="SSR Safe" />
 </p>

@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/forms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight form management and validation for React",
   "license": "MIT",
   "author": "Ahmed Allem",
