@@ -10,7 +10,7 @@
 
 # @allem-sdk/skills
 
-Agent Skills for Allem SDK — helps AI coding assistants (Claude Code, Cursor, Codex) understand and use Allem SDK hooks correctly.
+Agent Skills for Allem SDK. Helps AI coding assistants (Claude Code, Cursor, Codex) understand and use Allem SDK hooks correctly.
 
 ## Installation
 
@@ -22,12 +22,12 @@ This copies Allem SDK best practices and API reference into your project, making
 
 ## What's included
 
-- **SKILL.md** — Overview, setup, conventions, and quick examples
-- **rules/hooks.md** — All 8 utility hooks API and patterns
-- **rules/ai.md** — AI chat hooks, provider setup, server handler
-- **rules/forms.md** — Form management, validators, field props
-- **rules/analytics.md** — Analytics provider, tracking, identification
-- **rules/auth.md** — Authentication, session management, protected routes
+- **SKILL.md** Overview, setup, conventions, and quick examples
+- **rules/hooks.md** All 8 utility hooks API and patterns
+- **rules/ai.md** AI chat hooks, provider setup, server handler
+- **rules/forms.md** Form management, validators, field props
+- **rules/analytics.md** Analytics provider, tracking, identification
+- **rules/auth.md** Authentication, session management, protected routes
 
 ## Part of [Allem SDK](https://github.com/kingofmit/allem-sdk)
 

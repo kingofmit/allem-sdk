@@ -69,7 +69,7 @@ function ContactForm() {
 
 | Export | Type | Description |
 |--------|------|-------------|
-| `useForm` | Hook | Full form management — values, errors, touched, submit, reset |
+| `useForm` | Hook | Full form management: values, errors, touched, submit, reset |
 | `useField` | Hook | Standalone single-field hook with validation |
 | Validators | Functions | 9 built-in validators (see table above) |
 

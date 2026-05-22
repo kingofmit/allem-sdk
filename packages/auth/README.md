@@ -11,7 +11,7 @@
 
 # @allem-sdk/auth
 
-Authentication helpers for React. Provider-agnostic via an adapter interface — works with any auth backend.
+Authentication helpers for React. Provider-agnostic via an adapter interface that works with any auth backend.
 
 ## Installation
 

@@ -24,7 +24,7 @@ npm install @allem-sdk/analytics
 ```tsx
 import { AnalyticsProvider, useTrack, usePageView, useIdentify } from "@allem-sdk/analytics";
 
-// Define adapters for your providers — use one or many
+// Define adapters for your providers (use one or many)
 const mixpanelAdapter = {
   track: (event, properties) => mixpanel.track(event, properties),
   page: (name, properties) => mixpanel.track_pageview({ page: name, ...properties }),

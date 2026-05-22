@@ -23,8 +23,10 @@ packages/
   forms/       @allem-sdk/forms       Form management & validation
   analytics/   @allem-sdk/analytics   Provider-agnostic analytics
   auth/        @allem-sdk/auth        Authentication helpers
-examples/
-  nextjs/      Next.js 15 demo app
+apps/
+  docs/        Documentation site
+  examples/
+    nextjs/    Next.js 16 demo app
 ```
 
 ## Commands

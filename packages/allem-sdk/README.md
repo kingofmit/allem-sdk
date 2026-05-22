@@ -13,7 +13,7 @@
 
 # allem-sdk
 
-The complete Allem SDK for React — hooks, AI, forms, analytics, and auth in a single install.
+The complete Allem SDK for React. Hooks, AI, forms, analytics, and auth in a single install.
 
 ## Installation
 
@@ -48,19 +48,19 @@ import { useDebounce, useAllemChat, useForm, useAuth } from "allem-sdk";
 
 | Package | Description |
 |---------|-------------|
-| [`@allem-sdk/hooks`](https://www.npmjs.com/package/@allem-sdk/hooks) | 8 essential React hooks — useDebounce, useLocalStorage, useMediaQuery, and more |
-| [`@allem-sdk/ai`](https://www.npmjs.com/package/@allem-sdk/ai) | AI hooks built on Vercel AI SDK v6 — multi-provider chat & completions |
+| [`@allem-sdk/hooks`](https://www.npmjs.com/package/@allem-sdk/hooks) | 8 essential React hooks: useDebounce, useLocalStorage, useMediaQuery, and more |
+| [`@allem-sdk/ai`](https://www.npmjs.com/package/@allem-sdk/ai) | AI hooks built on Vercel AI SDK v6 with multi-provider chat & completions |
 | [`@allem-sdk/forms`](https://www.npmjs.com/package/@allem-sdk/forms) | Lightweight form management with 9 built-in validators |
-| [`@allem-sdk/analytics`](https://www.npmjs.com/package/@allem-sdk/analytics) | Provider-agnostic analytics — works with Mixpanel, Segment, PostHog, etc. |
-| [`@allem-sdk/auth`](https://www.npmjs.com/package/@allem-sdk/auth) | Authentication helpers — session management, protected routes |
+| [`@allem-sdk/analytics`](https://www.npmjs.com/package/@allem-sdk/analytics) | Provider-agnostic analytics. Works with Mixpanel, Segment, PostHog, etc. |
+| [`@allem-sdk/auth`](https://www.npmjs.com/package/@allem-sdk/auth) | Authentication helpers with session management and protected routes |
 
 ## Features
 
-- **SSR-safe** — works with Next.js, Vite, and Remix out of the box
-- **TypeScript strict** — full type safety with exported types
-- **Zero lock-in** — adapter pattern for AI, analytics, and auth providers
-- **Tree-shakeable** — ESM + CJS builds, import only what you need
-- **Lightweight** — no heavy dependencies, just React hooks
+- **SSR-safe** works with Next.js, Vite, and Remix out of the box
+- **TypeScript strict** with full type safety and exported types
+- **Zero lock-in** via adapter pattern for AI, analytics, and auth providers
+- **Tree-shakeable** ESM + CJS builds, import only what you need
+- **Lightweight** with no heavy dependencies, just React hooks
 
 ## Part of Allem SDK
 
