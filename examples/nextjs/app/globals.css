@@ -1,0 +1,668 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Light theme ─── */
+:root {
+  --bg: #fafafa;
+  --bg-subtle: #f4f4f5;
+  --fg: #09090b;
+  --fg-secondary: #52525b;
+  --muted: #a1a1aa;
+  --border: #e4e4e7;
+  --border-hover: #d4d4d8;
+  --accent: #18181b;
+  --accent-hover: #27272a;
+  --accent-subtle: rgba(0, 0, 0, 0.04);
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --success: #22c55e;
+  --success-bg: rgba(34, 197, 94, 0.08);
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.08);
+  --warning: #eab308;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+  --nav-bg: rgba(250, 250, 250, 0.85);
+  --code-bg: #f4f4f5;
+  --input-bg: #ffffff;
+  --badge-bg: #f4f4f5;
+  --badge-fg: #52525b;
+  --user-msg-bg: #f4f4f5;
+  --ai-msg-bg: #fafafa;
+  --toggle-bg: #e4e4e7;
+  --toggle-active: #18181b;
+  --skeleton: #e4e4e7;
+  --ring: rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Dark theme ─── */
+[data-theme="dark"] {
+  --bg: #09090b;
+  --bg-subtle: #18181b;
+  --fg: #fafafa;
+  --fg-secondary: #a1a1aa;
+  --muted: #71717a;
+  --border: #27272a;
+  --border-hover: #3f3f46;
+  --accent: #fafafa;
+  --accent-hover: #e4e4e7;
+  --accent-subtle: rgba(255, 255, 255, 0.06);
+  --card-bg: #18181b;
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --success: #4ade80;
+  --success-bg: rgba(74, 222, 128, 0.1);
+  --error: #f87171;
+  --error-bg: rgba(248, 113, 113, 0.1);
+  --warning: #facc15;
+  --nav-bg: rgba(9, 9, 11, 0.85);
+  --code-bg: #27272a;
+  --input-bg: #09090b;
+  --badge-bg: #27272a;
+  --badge-fg: #a1a1aa;
+  --user-msg-bg: rgba(255, 255, 255, 0.06);
+  --ai-msg-bg: #18181b;
+  --toggle-bg: #3f3f46;
+  --toggle-active: #fafafa;
+  --skeleton: #27272a;
+  --ring: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Base ─── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  transition: background 0.2s, color 0.2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─── */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--fg);
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+}
+
+h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--fg);
+}
+
+p {
+  color: var(--fg-secondary);
+}
+
+/* ─── Links ─── */
+a {
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* ─── Code ─── */
+code {
+  font-family: "SF Mono", "Fira Code", Menlo, monospace;
+  font-size: 0.8125rem;
+  padding: 0.15em 0.4em;
+  background: var(--code-bg);
+  border-radius: var(--radius-xs);
+  color: var(--fg-secondary);
+}
+
+/* ─── Inputs ─── */
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--fg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--muted);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--fg);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+/* ─── Buttons ─── */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Layout ─── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ─── Page header ─── */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.375rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* ─── Cards ─── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+/* ─── Form elements ─── */
+.error {
+  color: var(--error);
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+  font-weight: 500;
+}
+
+.label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+  color: var(--fg);
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+/* ─── Navbar ─── */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0 1.5rem;
+  height: 52px;
+  border-bottom: 1px solid var(--border);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--fg);
+  margin-right: auto;
+  letter-spacing: -0.02em;
+}
+
+.nav-link {
+  padding: 0.375rem 0.625rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--fg);
+  background: var(--accent-subtle);
+  opacity: 1;
+}
+
+/* ─── Theme toggle ─── */
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  color: var(--fg);
+  border-color: var(--border-hover);
+  opacity: 1;
+}
+
+/* ─── Badge ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15em 0.5em;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: var(--badge-bg);
+  color: var(--badge-fg);
+}
+
+/* ─── Card tag ─── */
+.card-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Status dot ─── */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.status-dot.success { background: var(--fg); }
+.status-dot.error { background: var(--muted); }
+.status-dot.warning { background: var(--muted); }
+
+/* ─── Chat ─── */
+.chat-container {
+  min-height: 320px;
+  max-height: 480px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.chat-message {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  max-width: 85%;
+}
+
+.chat-message.user {
+  background: var(--user-msg-bg);
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-message.assistant {
+  background: var(--ai-msg-bg);
+  border: 1px solid var(--border);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.chat-role {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.chat-text {
+  white-space: pre-wrap;
+  color: var(--fg);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.chat-form input {
+  flex: 1;
+}
+
+/* ─── Thinking indicator ─── */
+.thinking {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.8125rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thinking-dots::after {
+  content: "";
+  animation: dots 1.5s steps(4) infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+}
+
+/* ─── Button variants ─── */
+.btn-secondary {
+  background: var(--bg-subtle);
+  color: var(--fg-secondary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hover);
+  background: var(--accent-subtle);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.btn-danger:hover {
+  background: var(--accent-subtle);
+}
+
+.btn-success {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.btn-success:hover {
+  background: var(--accent-subtle);
+}
+
+/* ─── Success state ─── */
+.success-card {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.success-card h2 {
+  color: var(--fg);
+  font-size: 1.25rem;
+  margin-bottom: 0.375rem;
+}
+
+/* ─── Grid ─── */
+.grid-cards {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─── Hook demo ─── */
+.demo-result {
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-xs);
+  font-size: 0.8125rem;
+  color: var(--fg-secondary);
+}
+
+.demo-result strong {
+  color: var(--fg);
+}
+
+/* ─── Toggle switch ─── */
+.toggle-switch {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--toggle-bg);
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+  box-shadow: none;
+}
+
+.toggle-switch:hover {
+  box-shadow: none;
+  opacity: 1;
+}
+
+.toggle-switch.active {
+  background: var(--toggle-active);
+}
+
+.toggle-switch.active:hover {
+  opacity: 1;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: transform 0.2s;
+}
+
+.toggle-switch.active::after {
+  transform: translateX(20px);
+}
+
+/* ─── Info row ─── */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8125rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: var(--muted);
+}
+
+.info-value {
+  font-weight: 500;
+  color: var(--fg);
+}
+
+/* ─── Dropdown ─── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 160px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem;
+  list-style: none;
+  box-shadow: var(--card-shadow-hover);
+  z-index: 10;
+}
+
+.dropdown li {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.8125rem;
+  color: var(--fg-secondary);
+  cursor: default;
+  transition: background 0.1s;
+}
+
+.dropdown li:hover {
+  background: var(--accent-subtle);
+  color: var(--fg);
+}
+
+/* ─── Intersection demo ─── */
+.intersection-box {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  transition: background 0.3s, color 0.3s;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.intersection-box.visible {
+  background: var(--accent-subtle);
+  color: var(--fg);
+}
+
+.intersection-box.hidden {
+  background: var(--accent-subtle);
+  color: var(--muted);
+}
+
+/* ─── Code block ─── */
+.code-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0.75rem;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  font-size: 0.8125rem;
+}
+
+/* ─── Credential hint ─── */
+.credential-hint {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.credential-hint strong {
+  color: var(--fg-secondary);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.375rem;
+  }
+
+  .navbar {
+    padding: 0 1rem;
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+    white-space: nowrap;
+  }
+}

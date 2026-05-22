@@ -1,0 +1,28 @@
+{
+  "name": "example-nextjs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf .next"
+  },
+  "dependencies": {
+    "@allem-sdk/hooks": "workspace:*",
+    "@allem-sdk/ai": "workspace:*",
+    "@allem-sdk/forms": "workspace:*",
+    "@allem-sdk/analytics": "workspace:*",
+    "@allem-sdk/auth": "workspace:*",
+    "ai": "^6.0.0",
+    "@ai-sdk/react": "^3.0.0",
+    "@ai-sdk/google": "^3.0.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
