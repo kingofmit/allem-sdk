@@ -37,6 +37,11 @@
       "types": "./dist/auth.d.ts",
       "import": "./dist/auth.mjs",
       "require": "./dist/auth.js"
+    },
+    "./agents": {
+      "types": "./dist/agents.d.ts",
+      "import": "./dist/agents.mjs",
+      "require": "./dist/agents.js"
     }
   },
   "files": [
@@ -53,7 +58,8 @@
     "@allem-sdk/ai": "workspace:*",
     "@allem-sdk/forms": "workspace:*",
     "@allem-sdk/analytics": "workspace:*",
-    "@allem-sdk/auth": "workspace:*"
+    "@allem-sdk/auth": "workspace:*",
+    "@allem-sdk/agents": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
@@ -90,6 +96,7 @@
     "react",
     "hooks",
     "ai",
+    "agents",
     "forms",
     "analytics",
     "auth",

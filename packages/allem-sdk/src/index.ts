@@ -13,6 +13,26 @@ export {
 // AI
 export * from "@allem-sdk/ai";
 
+// Agents
+export {
+  useAllemAgent,
+  AgentProvider,
+  useAgentTools,
+  createAllemAgentHandler,
+  createAllemTool,
+} from "@allem-sdk/agents";
+export type {
+  UseAllemAgentOptions,
+  UseAllemAgentReturn,
+  AgentProviderProps,
+  AgentStatus,
+  AgentStep,
+  AgentToolCall,
+  AgentToolRegistration,
+  AllemAgentHandlerConfig,
+  AllemToolConfig,
+} from "@allem-sdk/agents";
+
 // Forms
 export {
   useForm,

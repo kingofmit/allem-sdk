@@ -34,6 +34,17 @@ const navigation = [
     ],
   },
   {
+    title: "Agents",
+    items: [
+      { title: "Overview", href: "/docs/agents" },
+      { title: "useAllemAgent", href: "/docs/agents/use-allem-agent" },
+      { title: "AgentProvider", href: "/docs/agents/agent-provider" },
+      { title: "useAgentTools", href: "/docs/agents/use-agent-tools" },
+      { title: "createAllemAgentHandler", href: "/docs/agents/create-allem-agent-handler" },
+      { title: "createAllemTool", href: "/docs/agents/create-allem-tool" },
+    ],
+  },
+  {
     title: "Forms",
     items: [
       { title: "Overview", href: "/docs/forms" },

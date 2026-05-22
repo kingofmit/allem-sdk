@@ -1,7 +1,7 @@
 ---
 name: allem-sdk-best-practices
-description: Best practices for Allem SDK — React hooks for AI, forms, analytics, auth, and utilities
-tags: allem-sdk, react, hooks, ai, forms, analytics, auth
+description: Best practices for Allem SDK — React hooks for AI, agents, forms, analytics, auth, and utilities
+tags: allem-sdk, react, hooks, ai, agents, forms, analytics, auth
 ---
 
 ## When to use
@@ -19,6 +19,7 @@ Allem SDK is a collection of React hooks for building modern applications. It pr
 | `@allem-sdk/ai` | `npm i @allem-sdk/ai` | AI chat & completion hooks (Vercel AI SDK v6) |
 | `@allem-sdk/forms` | `npm i @allem-sdk/forms` | Form management with 9 validators |
 | `@allem-sdk/analytics` | `npm i @allem-sdk/analytics` | Provider-agnostic analytics |
+| `@allem-sdk/agents` | `npm i @allem-sdk/agents` | Agentic AI with tool calling |
 | `@allem-sdk/auth` | `npm i @allem-sdk/auth` | Authentication & session management |
 
 ## New project setup
@@ -32,6 +33,9 @@ npm i @allem-sdk/hooks @allem-sdk/forms @allem-sdk/auth @allem-sdk/analytics
 
 # AI requires peer dependencies
 npm i @allem-sdk/ai ai @ai-sdk/react @ai-sdk/google
+
+# Agents (extends AI)
+npm i @allem-sdk/agents @allem-sdk/ai ai @ai-sdk/react @ai-sdk/google zod
 ```
 
 ## Core conventions
@@ -95,6 +99,38 @@ export const POST = createAllemChatHandler({
 });
 ```
 
+### AI Agent
+```tsx
+import { AllemAIProvider } from "@allem-sdk/ai";
+import { useAllemAgent } from "@allem-sdk/agents";
+
+// Wrap your app
+<AllemAIProvider api="/api/agent" provider="google">
+  <Agent />
+</AllemAIProvider>
+
+// In a component
+const { messages, sendMessage, agentStatus, steps, currentToolCalls } = useAllemAgent();
+```
+
+### Agent server route
+```ts
+import { createAllemAgentHandler, createAllemTool } from "@allem-sdk/agents";
+import { google } from "@ai-sdk/google";
+import { z } from "zod";
+
+const weatherTool = createAllemTool({
+  description: "Get weather",
+  parameters: z.object({ city: z.string() }),
+  execute: async ({ city }) => ({ city, temp: 72 }),
+});
+
+export const POST = createAllemAgentHandler({
+  providers: { google: (model) => google(model ?? "gemini-2.0-flash") },
+  tools: { weather: weatherTool },
+});
+```
+
 ### Forms
 ```tsx
 import { useForm, required, email } from "@allem-sdk/forms";
@@ -137,6 +173,7 @@ const { user, signIn, signOut, status } = useAuth();
 Consult the rule files in the `rules/` directory for detailed per-package API reference and best practices:
 - Utility hooks: useDebounce, useLocalStorage, useMediaQuery, useClickOutside, useToggle, useCopyToClipboard, useIntersectionObserver, useWindowSize
 - AI: AllemAIProvider, useAllemAIConfig, useAllemChat, useAllemCompletion, createAllemChatHandler
+- Agents: useAllemAgent, AgentProvider, useAgentTools, createAllemAgentHandler, createAllemTool
 - Forms: useForm, useField, validators
 - Analytics: AnalyticsProvider, useTrack, usePageView, useIdentify
 - Auth: AuthProvider, useAuth, useSession, ProtectedRoute

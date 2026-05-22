@@ -8,6 +8,7 @@ export default defineConfig({
     "src/forms.ts",
     "src/analytics.ts",
     "src/auth.ts",
+    "src/agents.ts",
   ],
   format: ["cjs", "esm"],
   dts: true,
