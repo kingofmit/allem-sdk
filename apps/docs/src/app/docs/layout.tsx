@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navigation = [
   {
@@ -99,6 +100,7 @@ export default function DocsLayout({
               </a>
             </div>
           </div>
+          <ThemeToggle />
         </div>
       </nav>
 

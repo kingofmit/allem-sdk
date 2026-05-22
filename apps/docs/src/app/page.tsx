@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const features = [
   {
@@ -108,6 +109,7 @@ export default function HomePage() {
             <code className="hidden rounded-lg bg-neutral-100 px-3 py-1.5 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 sm:block">
               npm i allem-sdk
             </code>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
