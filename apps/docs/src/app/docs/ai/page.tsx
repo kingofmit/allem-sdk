@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const exports = [
   { name: "AllemAIProvider", description: "Context provider for default AI configuration", href: "/docs/ai/allem-ai-provider" },
+  { name: "useAllemAIConfig", description: "Access the current provider context values", href: "/docs/ai/use-allem-ai-config" },
   { name: "useAllemChat", description: "Chat hook with streaming, message history, and provider context", href: "/docs/ai/use-allem-chat" },
   { name: "useAllemCompletion", description: "Text completion hook for single-turn prompts", href: "/docs/ai/use-allem-completion" },
   { name: "createAllemChatHandler", description: "Server-side API route handler for chat", href: "/docs/ai/create-allem-chat-handler" },

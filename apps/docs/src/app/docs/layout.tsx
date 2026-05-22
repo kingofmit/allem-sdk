@@ -27,6 +27,7 @@ const navigation = [
     items: [
       { title: "Overview", href: "/docs/ai" },
       { title: "AllemAIProvider", href: "/docs/ai/allem-ai-provider" },
+      { title: "useAllemAIConfig", href: "/docs/ai/use-allem-ai-config" },
       { title: "useAllemChat", href: "/docs/ai/use-allem-chat" },
       { title: "useAllemCompletion", href: "/docs/ai/use-allem-completion" },
       { title: "createAllemChatHandler", href: "/docs/ai/create-allem-chat-handler" },
