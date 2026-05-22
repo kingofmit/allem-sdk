@@ -22,6 +22,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build && changeset publish",
+    "docs:dev": "turbo dev --filter=docs",
+    "docs:build": "turbo build --filter=docs",
     "example:dev": "turbo dev --filter=example-nextjs"
   },
   "devDependencies": {
