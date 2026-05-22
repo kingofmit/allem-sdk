@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/agents",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Agentic AI hooks for React with multi-step tool calling, status tracking, and typed tool definitions. Built on Vercel AI SDK.",
   "license": "MIT",
   "author": "Ahmed Allem",

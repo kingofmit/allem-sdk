@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/react-19-61dafb" alt="React 19" />
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
   <img src="https://img.shields.io/badge/AI_SDK-v6-black" alt="AI SDK v6" />
-  <img src="https://img.shields.io/badge/tests-44_passing-brightgreen" alt="Tests" />
+  <img src="https://img.shields.io/badge/tests-53_passing-brightgreen" alt="Tests" />
 </p>
 
 # allem-sdk
@@ -26,6 +26,7 @@ Or install individual packages:
 ```bash
 npm install @allem-sdk/hooks       # React hooks
 npm install @allem-sdk/ai          # AI chat & completions
+npm install @allem-sdk/agents      # Agentic AI with tool calling
 npm install @allem-sdk/forms       # Form management
 npm install @allem-sdk/analytics   # Analytics tracking
 npm install @allem-sdk/auth        # Authentication
@@ -50,6 +51,7 @@ import { useDebounce, useAllemChat, useForm, useAuth } from "allem-sdk";
 |---------|-------------|
 | [`@allem-sdk/hooks`](https://www.npmjs.com/package/@allem-sdk/hooks) | 8 essential React hooks: useDebounce, useLocalStorage, useMediaQuery, and more |
 | [`@allem-sdk/ai`](https://www.npmjs.com/package/@allem-sdk/ai) | AI hooks built on Vercel AI SDK v6 with multi-provider chat & completions |
+| [`@allem-sdk/agents`](https://www.npmjs.com/package/@allem-sdk/agents) | Agentic AI with tool calling, status tracking, and typed tool definitions |
 | [`@allem-sdk/forms`](https://www.npmjs.com/package/@allem-sdk/forms) | Lightweight form management with 9 built-in validators |
 | [`@allem-sdk/analytics`](https://www.npmjs.com/package/@allem-sdk/analytics) | Provider-agnostic analytics. Works with Mixpanel, Segment, PostHog, etc. |
 | [`@allem-sdk/auth`](https://www.npmjs.com/package/@allem-sdk/auth) | Authentication helpers with session management and protected routes |
