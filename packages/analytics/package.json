@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/analytics",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Provider-agnostic analytics hooks for React",
   "license": "MIT",
   "author": "Ahmed Allem",

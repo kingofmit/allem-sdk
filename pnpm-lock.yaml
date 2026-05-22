@@ -94,6 +94,37 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(jsdom@25.0.0)
 
+  packages/allem-sdk:
+    dependencies:
+      '@allem-sdk/ai':
+        specifier: workspace:*
+        version: link:../ai
+      '@allem-sdk/analytics':
+        specifier: workspace:*
+        version: link:../analytics
+      '@allem-sdk/auth':
+        specifier: workspace:*
+        version: link:../auth
+      '@allem-sdk/forms':
+        specifier: workspace:*
+        version: link:../forms
+      '@allem-sdk/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      react:
+        specifier: '>=18.0.0'
+        version: 19.0.0
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.0.0
+      tsup:
+        specifier: ^8.4.0
+        version: 8.4.0(typescript@5.8.2)
+      typescript:
+        specifier: ^5.8.0
+        version: 5.8.2
+
   packages/analytics:
     devDependencies:
       '@testing-library/react':

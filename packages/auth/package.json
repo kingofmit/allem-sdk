@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/auth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Authentication helpers for React — session, protected routes, social login",
   "license": "MIT",
   "author": "Ahmed Allem",

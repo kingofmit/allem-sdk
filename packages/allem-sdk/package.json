@@ -1,0 +1,101 @@
+{
+  "name": "allem-sdk",
+  "version": "0.1.0",
+  "description": "The complete Allem SDK — hooks, AI, forms, analytics, and auth for React",
+  "license": "MIT",
+  "author": "Ahmed Allem (https://kingallem.com)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks.d.ts",
+      "import": "./dist/hooks.mjs",
+      "require": "./dist/hooks.js"
+    },
+    "./ai": {
+      "types": "./dist/ai.d.ts",
+      "import": "./dist/ai.mjs",
+      "require": "./dist/ai.js"
+    },
+    "./forms": {
+      "types": "./dist/forms.d.ts",
+      "import": "./dist/forms.mjs",
+      "require": "./dist/forms.js"
+    },
+    "./analytics": {
+      "types": "./dist/analytics.d.ts",
+      "import": "./dist/analytics.mjs",
+      "require": "./dist/analytics.js"
+    },
+    "./auth": {
+      "types": "./dist/auth.d.ts",
+      "import": "./dist/auth.mjs",
+      "require": "./dist/auth.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@allem-sdk/hooks": "workspace:*",
+    "@allem-sdk/ai": "workspace:*",
+    "@allem-sdk/forms": "workspace:*",
+    "@allem-sdk/analytics": "workspace:*",
+    "@allem-sdk/auth": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@ai-sdk/anthropic": {
+      "optional": true
+    },
+    "@ai-sdk/google": {
+      "optional": true
+    },
+    "@ai-sdk/openai": {
+      "optional": true
+    },
+    "@ai-sdk/react": {
+      "optional": true
+    },
+    "ai": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingofmit/allem-sdk.git",
+    "directory": "packages/allem-sdk"
+  },
+  "keywords": [
+    "allem-sdk",
+    "react",
+    "hooks",
+    "ai",
+    "forms",
+    "analytics",
+    "auth",
+    "sdk"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

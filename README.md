@@ -3,7 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
+  <img src="https://img.shields.io/badge/react-18+-61dafb" alt="React 18+" />
+  <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/AI_SDK-v6-black" alt="AI SDK v6" />
+  <img src="https://img.shields.io/badge/tests-44_passing-brightgreen" alt="Tests" />
 </p>
 
 ## Packages

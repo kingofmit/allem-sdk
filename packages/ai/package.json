@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/ai",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AI hooks for React — useChat, useAgent, useStreaming. Built on Vercel AI SDK.",
   "license": "MIT",
   "author": "Ahmed Allem",
