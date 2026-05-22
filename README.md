@@ -1,8 +1,10 @@
-# Allem SDK
+<p align="center">
+  <img src=".github/AllemSDK.png" alt="Allem SDK" />
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-
-Developer SDK for React — AI hooks, form management, analytics, authentication, and utility hooks.
+<p align="center">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /></a>
+</p>
 
 ## Packages
 
@@ -152,6 +154,12 @@ pnpm test
 ```
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
+
+## Support
+
+If you find Allem SDK useful, consider supporting its development:
+
+<a href="https://buymeacoffee.com/kingofmit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" /></a>
 
 ## License
 
