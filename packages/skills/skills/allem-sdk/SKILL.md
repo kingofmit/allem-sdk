@@ -136,7 +136,7 @@ const { user, signIn, signOut, status } = useAuth();
 ## Additional resources
 Consult the rule files in the `rules/` directory for detailed per-package API reference and best practices:
 - Utility hooks: useDebounce, useLocalStorage, useMediaQuery, useClickOutside, useToggle, useCopyToClipboard, useIntersectionObserver, useWindowSize
-- AI: useAllemChat, useAllemCompletion, AllemAIProvider, createAllemChatHandler
+- AI: AllemAIProvider, useAllemAIConfig, useAllemChat, useAllemCompletion, createAllemChatHandler
 - Forms: useForm, useField, validators
 - Analytics: AnalyticsProvider, useTrack, usePageView, useIdentify
 - Auth: AuthProvider, useAuth, useSession, ProtectedRoute

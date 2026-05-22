@@ -2,7 +2,7 @@
 
 ```tsx
 // Client
-import { AllemAIProvider, useAllemChat, useAllemCompletion } from "@allem-sdk/ai";
+import { AllemAIProvider, useAllemAIConfig, useAllemChat, useAllemCompletion } from "@allem-sdk/ai";
 
 // Server
 import { createAllemChatHandler } from "@allem-sdk/ai";
@@ -25,6 +25,35 @@ Context provider for default AI configuration.
 <AllemAIProvider api="/api/chat" provider="google" model="gemini-2.0-flash">
   <App />
 </AllemAIProvider>
+```
+
+## useAllemAIConfig
+
+Hook to access the current `AllemAIProvider` context values. Useful when you need to read the configured `api`, `provider`, `model`, or `headers` in a component outside of the chat/completion hooks.
+
+Returns `AllemAIConfig`:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `api` | `string` | Current API endpoint |
+| `provider` | `"google" \| "anthropic" \| "openai" \| undefined` | Current provider |
+| `model` | `string \| undefined` | Current model |
+| `headers` | `Record<string, string> \| undefined` | Current headers |
+
+```tsx
+const config = useAllemAIConfig();
+
+// Use the configured API endpoint for custom requests
+const res = await fetch(config.api, {
+  method: "POST",
+  headers: { ...config.headers, "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt: "Hello" }),
+});
+
+// Conditionally render based on provider
+if (config.provider === "anthropic") {
+  return <AnthropicBadge />;
+}
 ```
 
 ## useAllemChat
