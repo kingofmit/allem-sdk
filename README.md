@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/allem-sdk"><img src="https://img.shields.io/npm/v/allem-sdk.svg" alt="npm version" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
   <img src="https://img.shields.io/badge/react-19-61dafb" alt="React 19" />
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
@@ -10,10 +11,13 @@
   <img src="https://img.shields.io/badge/tests-44_passing-brightgreen" alt="Tests" />
 </p>
 
+The React SDK for modern apps — hooks, AI, forms, analytics, and auth in one toolkit.
+
 ## Packages
 
 | Package | Description | Install |
 |---------|-------------|---------|
+| [`allem-sdk`](./packages/allem-sdk) | Meta-package — installs everything | `npm i allem-sdk` |
 | [`@allem-sdk/hooks`](./packages/hooks) | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | `npm i @allem-sdk/hooks` |
 | [`@allem-sdk/ai`](./packages/ai) | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | `npm i @allem-sdk/ai` |
 | [`@allem-sdk/forms`](./packages/forms) | Lightweight form management and validation | `npm i @allem-sdk/forms` |
@@ -131,7 +135,7 @@ function App() {
 
 ## Example App
 
-The [`examples/nextjs`](./examples/nextjs) directory contains a full Next.js 15 app demonstrating all 5 packages working together — interactive hook demos, AI chat, form validation, auth flow with protected routes, and a multi-widget dashboard.
+The [`apps/examples/nextjs`](./apps/examples/nextjs) directory contains a full Next.js 15 app demonstrating all 5 packages working together — interactive hook demos, AI chat, form validation, auth flow with protected routes, and a multi-widget dashboard.
 
 ```bash
 pnpm example:dev
@@ -139,7 +143,7 @@ pnpm example:dev
 
 ## Tech Stack
 
-- [React 18+](https://react.dev/) with `"use client"` directives
+- [React 19](https://react.dev/) with `"use client"` directives
 - [Vercel AI SDK v6](https://sdk.vercel.ai/) for `@allem-sdk/ai`
 - [TypeScript](https://www.typescriptlang.org/) (strict mode)
 - [Turborepo](https://turbo.build/) + [pnpm](https://pnpm.io/) workspaces
