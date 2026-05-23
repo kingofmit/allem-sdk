@@ -1,7 +1,7 @@
 {
   "name": "@allem-sdk/analytics",
-  "version": "0.1.1",
-  "description": "Provider-agnostic analytics hooks for React",
+  "version": "0.1.2",
+  "description": "Provider-agnostic analytics hooks for React. Works with Mixpanel, Segment, PostHog, Amplitude, and any custom adapter. useTrack, usePageView, useIdentify.",
   "license": "MIT",
   "author": "Ahmed Allem",
   "main": "./dist/index.js",
@@ -14,7 +14,9 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
@@ -40,6 +42,22 @@
     "url": "https://github.com/kingofmit/allem-sdk.git",
     "directory": "packages/analytics"
   },
-  "keywords": ["allem-sdk", "react", "hooks", "analytics", "tracking", "mixpanel", "segment"],
-  "publishConfig": { "access": "public" }
+  "keywords": [
+    "allem-sdk",
+    "react",
+    "react-hooks",
+    "analytics",
+    "tracking",
+    "mixpanel",
+    "segment",
+    "posthog",
+    "amplitude",
+    "event-tracking",
+    "page-view",
+    "typescript",
+    "nextjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
