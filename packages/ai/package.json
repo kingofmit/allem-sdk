@@ -1,7 +1,7 @@
 {
   "name": "@allem-sdk/ai",
-  "version": "0.1.1",
-  "description": "AI hooks for React — useChat, useAgent, useStreaming. Built on Vercel AI SDK.",
+  "version": "0.1.2",
+  "description": "AI chat and completion hooks for React. Multi-provider streaming (Google Gemini, Anthropic Claude, OpenAI GPT). Built on Vercel AI SDK v6.",
   "license": "MIT",
   "author": "Ahmed Allem",
   "main": "./dist/index.js",
@@ -74,11 +74,18 @@
     "allem-sdk",
     "ai",
     "react",
-    "hooks",
-    "useChat",
-    "useAgent",
+    "react-hooks",
+    "chatbot",
+    "streaming",
     "vercel-ai-sdk",
-    "llm"
+    "ai-sdk",
+    "llm",
+    "google-gemini",
+    "anthropic-claude",
+    "openai",
+    "multi-provider",
+    "typescript",
+    "nextjs"
   ],
   "publishConfig": {
     "access": "public"

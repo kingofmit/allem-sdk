@@ -1,7 +1,7 @@
 {
   "name": "@allem-sdk/forms",
-  "version": "0.1.1",
-  "description": "Lightweight form management and validation for React",
+  "version": "0.1.2",
+  "description": "Lightweight React form hooks with 9 built-in validators. useForm, useField, required, email, minLength, and more. Zero dependencies.",
   "license": "MIT",
   "author": "Ahmed Allem",
   "main": "./dist/index.js",
@@ -14,7 +14,9 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
@@ -40,6 +42,20 @@
     "url": "https://github.com/kingofmit/allem-sdk.git",
     "directory": "packages/forms"
   },
-  "keywords": ["allem-sdk", "react", "hooks", "forms", "validation", "useForm"],
-  "publishConfig": { "access": "public" }
+  "keywords": [
+    "allem-sdk",
+    "react",
+    "react-hooks",
+    "forms",
+    "form-validation",
+    "useForm",
+    "useField",
+    "validation",
+    "typescript",
+    "nextjs",
+    "lightweight"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

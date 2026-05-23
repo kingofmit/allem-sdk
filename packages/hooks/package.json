@@ -1,7 +1,7 @@
 {
   "name": "@allem-sdk/hooks",
-  "version": "0.1.1",
-  "description": "A collection of essential React hooks for modern applications",
+  "version": "0.1.2",
+  "description": "8 essential React hooks: useDebounce, useLocalStorage, useMediaQuery, useClickOutside, useToggle, useCopyToClipboard, useIntersectionObserver, useWindowSize. SSR-safe, TypeScript strict.",
   "license": "MIT",
   "author": "Ahmed Allem",
   "main": "./dist/index.js",
@@ -14,7 +14,9 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
@@ -41,7 +43,22 @@
     "url": "https://github.com/kingofmit/allem-sdk.git",
     "directory": "packages/hooks"
   },
-  "keywords": ["allem-sdk", "react", "hooks", "useDebounce", "useMediaQuery", "useLocalStorage"],
+  "keywords": [
+    "allem-sdk",
+    "react",
+    "react-hooks",
+    "useDebounce",
+    "useLocalStorage",
+    "useMediaQuery",
+    "useClickOutside",
+    "useToggle",
+    "useCopyToClipboard",
+    "useIntersectionObserver",
+    "useWindowSize",
+    "ssr",
+    "typescript",
+    "nextjs"
+  ],
   "publishConfig": {
     "access": "public"
   }

@@ -1,7 +1,7 @@
 {
   "name": "@allem-sdk/auth",
-  "version": "0.1.1",
-  "description": "Authentication helpers for React — session, protected routes, social login",
+  "version": "0.1.2",
+  "description": "React authentication hooks with session management and protected routes. Provider-agnostic adapter pattern. useAuth, useSession, ProtectedRoute.",
   "license": "MIT",
   "author": "Ahmed Allem",
   "main": "./dist/index.js",
@@ -14,7 +14,9 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
@@ -40,6 +42,20 @@
     "url": "https://github.com/kingofmit/allem-sdk.git",
     "directory": "packages/auth"
   },
-  "keywords": ["allem-sdk", "react", "hooks", "auth", "authentication", "session", "protected-route"],
-  "publishConfig": { "access": "public" }
+  "keywords": [
+    "allem-sdk",
+    "react",
+    "react-hooks",
+    "auth",
+    "authentication",
+    "session",
+    "protected-route",
+    "login",
+    "useAuth",
+    "typescript",
+    "nextjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
