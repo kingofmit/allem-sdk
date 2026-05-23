@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/hooks",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "8 essential React hooks: useDebounce, useLocalStorage, useMediaQuery, useClickOutside, useToggle, useCopyToClipboard, useIntersectionObserver, useWindowSize. SSR-safe, TypeScript strict.",
   "license": "MIT",
   "author": "Ahmed Allem",

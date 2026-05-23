@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provider-agnostic key-value storage for React. Adapters for localStorage, sessionStorage, cookies, and in-memory. useStorage, useStorageItem. SSR-safe.",
   "license": "MIT",
   "author": "Ahmed Allem",

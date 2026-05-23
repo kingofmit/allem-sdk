@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/notifications",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Headless notification/toast system for React. useNotify, useNotifications, NotificationProvider. No UI opinions — bring your own components.",
   "license": "MIT",
   "author": "Ahmed Allem",

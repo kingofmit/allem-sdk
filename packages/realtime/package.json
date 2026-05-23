@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/realtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provider-agnostic realtime hooks for React. WebSocket and SSE abstractions with useChannel, usePresence, RealtimeProvider. Works with any backend.",
   "license": "MIT",
   "author": "Ahmed Allem",
