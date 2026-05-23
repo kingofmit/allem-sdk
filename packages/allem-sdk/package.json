@@ -1,6 +1,6 @@
 {
   "name": "allem-sdk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The React SDK for AI agents, chat, forms, auth, analytics, and 8 essential hooks. One install, zero lock-in. Built on Vercel AI SDK v6.",
   "license": "MIT",
   "author": "Ahmed Allem (https://kingallem.com)",

@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/analytics",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Provider-agnostic analytics hooks for React. Works with Mixpanel, Segment, PostHog, Amplitude, and any custom adapter. useTrack, usePageView, useIdentify.",
   "license": "MIT",
   "author": "Ahmed Allem",

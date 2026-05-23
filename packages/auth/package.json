@@ -1,6 +1,6 @@
 {
   "name": "@allem-sdk/auth",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "React authentication hooks with session management and protected routes. Provider-agnostic adapter pattern. useAuth, useSession, ProtectedRoute.",
   "license": "MIT",
   "author": "Ahmed Allem",
