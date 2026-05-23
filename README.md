@@ -15,15 +15,15 @@ The React SDK for modern apps. Hooks, AI, forms, analytics, and auth in one tool
 
 ## Packages
 
-| Package | Description | Install |
-|---------|-------------|---------|
-| [`allem-sdk`](./packages/allem-sdk) | Meta-package that installs everything | `npm i allem-sdk` |
-| [`@allem-sdk/hooks`](./packages/hooks) | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | `npm i @allem-sdk/hooks` |
-| [`@allem-sdk/ai`](./packages/ai) | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | `npm i @allem-sdk/ai` |
-| [`@allem-sdk/agents`](./packages/agents) | Agentic AI with tool calling, status tracking, and typed tool definitions | `npm i @allem-sdk/agents` |
-| [`@allem-sdk/forms`](./packages/forms) | Lightweight form management and validation | `npm i @allem-sdk/forms` |
-| [`@allem-sdk/analytics`](./packages/analytics) | Provider-agnostic analytics hooks | `npm i @allem-sdk/analytics` |
-| [`@allem-sdk/auth`](./packages/auth) | Authentication helpers (session, protected routes) | `npm i @allem-sdk/auth` |
+| Package | Description | npm | Docs |
+|---------|-------------|-----|------|
+| `allem-sdk` | Meta-package that installs everything | [![npm](https://img.shields.io/npm/v/allem-sdk.svg)](https://www.npmjs.com/package/allem-sdk) | [README](./packages/allem-sdk) |
+| `@allem-sdk/hooks` | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | [![npm](https://img.shields.io/npm/v/@allem-sdk/hooks.svg)](https://www.npmjs.com/package/@allem-sdk/hooks) | [README](./packages/hooks) |
+| `@allem-sdk/ai` | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | [![npm](https://img.shields.io/npm/v/@allem-sdk/ai.svg)](https://www.npmjs.com/package/@allem-sdk/ai) | [README](./packages/ai) |
+| `@allem-sdk/agents` | Agentic AI with tool calling, status tracking, and typed tool definitions | [![npm](https://img.shields.io/npm/v/@allem-sdk/agents.svg)](https://www.npmjs.com/package/@allem-sdk/agents) | [README](./packages/agents) |
+| `@allem-sdk/forms` | Lightweight form management and validation | [![npm](https://img.shields.io/npm/v/@allem-sdk/forms.svg)](https://www.npmjs.com/package/@allem-sdk/forms) | [README](./packages/forms) |
+| `@allem-sdk/analytics` | Provider-agnostic analytics hooks | [![npm](https://img.shields.io/npm/v/@allem-sdk/analytics.svg)](https://www.npmjs.com/package/@allem-sdk/analytics) | [README](./packages/analytics) |
+| `@allem-sdk/auth` | Authentication helpers (session, protected routes) | [![npm](https://img.shields.io/npm/v/@allem-sdk/auth.svg)](https://www.npmjs.com/package/@allem-sdk/auth) | [README](./packages/auth) |
 
 ## Build with AI Agents
 
