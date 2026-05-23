@@ -2,3 +2,4 @@ export { AuthProvider, type AuthAdapter, type AuthUser, type AuthSession, type A
 export { useAuth, type UseAuthReturn } from "./useAuth";
 export { useSession, type UseSessionReturn } from "./useSession";
 export { ProtectedRoute, type ProtectedRouteProps } from "./ProtectedRoute";
+export { supabaseAdapter, nextAuthAdapter, clerkAdapter } from "./adapters";

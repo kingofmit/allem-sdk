@@ -2,3 +2,4 @@ export { AnalyticsProvider, type AnalyticsAdapter, type AnalyticsProviderProps }
 export { useTrack } from "./useTrack";
 export { usePageView } from "./usePageView";
 export { useIdentify } from "./useIdentify";
+export { mixpanelAdapter, posthogAdapter, segmentAdapter, consoleAdapter } from "./adapters";
