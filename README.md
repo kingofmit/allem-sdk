@@ -8,22 +8,25 @@
   <img src="https://img.shields.io/badge/react-19-61dafb" alt="React 19" />
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
   <img src="https://img.shields.io/badge/AI_SDK-v6-black" alt="AI SDK v6" />
-  <img src="https://img.shields.io/badge/tests-44_passing-brightgreen" alt="Tests" />
+  <img src="https://img.shields.io/badge/tests-96_passing-brightgreen" alt="Tests" />
 </p>
 
-The React SDK for modern apps. Hooks, AI, forms, analytics, and auth in one toolkit.
+The React SDK for modern apps. AI agents, chat, hooks, forms, auth, analytics, storage, notifications, and realtime — in one toolkit.
 
 ## Packages
 
 | Package | Description | npm | Docs |
 |---------|-------------|-----|------|
 | `allem-sdk` | Meta-package that installs everything | [![npm](https://img.shields.io/npm/v/allem-sdk.svg)](https://www.npmjs.com/package/allem-sdk) | [README](./packages/allem-sdk) |
-| `@allem-sdk/hooks` | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | [![npm](https://img.shields.io/npm/v/@allem-sdk/hooks.svg)](https://www.npmjs.com/package/@allem-sdk/hooks) | [README](./packages/hooks) |
+| `@allem-sdk/hooks` | 13 essential React hooks (useDebounce, useFetch, useThrottle, ...) | [![npm](https://img.shields.io/npm/v/@allem-sdk/hooks.svg)](https://www.npmjs.com/package/@allem-sdk/hooks) | [README](./packages/hooks) |
 | `@allem-sdk/ai` | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | [![npm](https://img.shields.io/npm/v/@allem-sdk/ai.svg)](https://www.npmjs.com/package/@allem-sdk/ai) | [README](./packages/ai) |
-| `@allem-sdk/agents` | Agentic AI with tool calling, status tracking, and typed tool definitions | [![npm](https://img.shields.io/npm/v/@allem-sdk/agents.svg)](https://www.npmjs.com/package/@allem-sdk/agents) | [README](./packages/agents) |
+| `@allem-sdk/agents` | Agentic AI with tool loops, guardrails, memory, and planning | [![npm](https://img.shields.io/npm/v/@allem-sdk/agents.svg)](https://www.npmjs.com/package/@allem-sdk/agents) | [README](./packages/agents) |
 | `@allem-sdk/forms` | Lightweight form management and validation | [![npm](https://img.shields.io/npm/v/@allem-sdk/forms.svg)](https://www.npmjs.com/package/@allem-sdk/forms) | [README](./packages/forms) |
-| `@allem-sdk/analytics` | Provider-agnostic analytics hooks | [![npm](https://img.shields.io/npm/v/@allem-sdk/analytics.svg)](https://www.npmjs.com/package/@allem-sdk/analytics) | [README](./packages/analytics) |
-| `@allem-sdk/auth` | Authentication helpers (session, protected routes) | [![npm](https://img.shields.io/npm/v/@allem-sdk/auth.svg)](https://www.npmjs.com/package/@allem-sdk/auth) | [README](./packages/auth) |
+| `@allem-sdk/analytics` | Provider-agnostic analytics (Mixpanel, PostHog, Segment adapters) | [![npm](https://img.shields.io/npm/v/@allem-sdk/analytics.svg)](https://www.npmjs.com/package/@allem-sdk/analytics) | [README](./packages/analytics) |
+| `@allem-sdk/auth` | Authentication with adapters (Supabase, NextAuth, Clerk) | [![npm](https://img.shields.io/npm/v/@allem-sdk/auth.svg)](https://www.npmjs.com/package/@allem-sdk/auth) | [README](./packages/auth) |
+| `@allem-sdk/storage` | Key-value storage (localStorage, cookies, memory adapters) | [![npm](https://img.shields.io/npm/v/@allem-sdk/storage.svg)](https://www.npmjs.com/package/@allem-sdk/storage) | [README](./packages/storage) |
+| `@allem-sdk/notifications` | Headless toast/notification system | [![npm](https://img.shields.io/npm/v/@allem-sdk/notifications.svg)](https://www.npmjs.com/package/@allem-sdk/notifications) | [README](./packages/notifications) |
+| `@allem-sdk/realtime` | WebSocket/SSE abstraction (useChannel, usePresence) | [![npm](https://img.shields.io/npm/v/@allem-sdk/realtime.svg)](https://www.npmjs.com/package/@allem-sdk/realtime) | [README](./packages/realtime) |
 
 ## Build with AI Agents
 
@@ -33,7 +36,7 @@ Allem SDK ships with a skill that teaches AI coding agents the full API, includi
 npx skills add kingofmit/allem-sdk
 ```
 
-The agent gets complete coverage of all 5 packages, so it knows how to wire up providers, compose hooks, validate forms, and set up auth without you having to explain the API.
+The agent gets complete coverage of all 9 packages, so it knows how to wire up providers, compose hooks, build agents, validate forms, and set up auth without you having to explain the API.
 
 ## Quick Start
 
@@ -144,12 +147,17 @@ function App() {
 }
 ```
 
-## Example App
+## Examples
 
-The [`apps/examples/nextjs`](./apps/examples/nextjs) directory contains a full Next.js 16 app demonstrating all 5 packages working together: interactive hook demos, AI chat, form validation, auth flow with protected routes, and a multi-widget dashboard.
+| Example | Description |
+|---------|-------------|
+| [`nextjs-agent`](./examples/nextjs-agent) | Multi-step AI agent with tool calling, guardrails, and think-then-act pattern |
+| [`nextjs-chat`](./examples/nextjs-chat) | Simple AI chat with `useAllemChat` and multi-provider support |
 
 ```bash
-pnpm example:dev
+cd examples/nextjs-agent
+cp .env.example .env.local  # Add your API key
+pnpm install && pnpm dev
 ```
 
 ## Tech Stack
@@ -159,7 +167,7 @@ pnpm example:dev
 - [TypeScript](https://www.typescriptlang.org/) (strict mode)
 - [Turborepo](https://turbo.build/) + [pnpm](https://pnpm.io/) workspaces
 - [tsup](https://tsup.egoist.dev/) (ESM + CJS builds)
-- [Vitest](https://vitest.dev/) (44 tests)
+- [Vitest](https://vitest.dev/) (96 tests)
 - [Changesets](https://github.com/changesets/changesets) for versioning
 
 ## Development

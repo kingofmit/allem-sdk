@@ -25,6 +25,7 @@ npm install @allem-sdk/hooks
 | Hook | Description |
 |------|-------------|
 | `useDebounce` | Debounce a value by a given delay |
+| `useThrottle` | Throttle a value, updating at most once per delay |
 | `useLocalStorage` | Persist state in localStorage with SSR safety |
 | `useMediaQuery` | Reactive CSS media query matching |
 | `useClickOutside` | Detect clicks outside a ref element |
@@ -32,6 +33,10 @@ npm install @allem-sdk/hooks
 | `useCopyToClipboard` | Copy text to clipboard with status |
 | `useIntersectionObserver` | Observe element visibility via IntersectionObserver |
 | `useWindowSize` | Reactive window dimensions |
+| `useFetch` | Data fetching with loading/error states and refetch |
+| `usePrevious` | Track the previous value of a variable |
+| `useKeyPress` | Detect if a specific key is pressed |
+| `useOnlineStatus` | Reactive browser online/offline status |
 
 ## Usage
 
@@ -60,6 +65,37 @@ function Dropdown() {
       {isOpen && <ul>...</ul>}
     </div>
   );
+}
+```
+
+## More Examples
+
+```tsx
+import { useFetch, useThrottle, useKeyPress, useOnlineStatus, usePrevious } from "@allem-sdk/hooks";
+
+function UserList() {
+  const { data, error, isLoading, refetch } = useFetch<User[]>("/api/users");
+  const isOnline = useOnlineStatus();
+  const isEscPressed = useKeyPress("Escape");
+
+  if (!isOnline) return <p>You are offline</p>;
+  if (isLoading) return <p>Loading...</p>;
+  return <ul>{data?.map((u) => <li key={u.id}>{u.name}</li>)}</ul>;
+}
+
+function ScrollTracker() {
+  const [scroll, setScroll] = useState(0);
+  const throttledScroll = useThrottle(scroll, 100);
+  const prevScroll = usePrevious(throttledScroll);
+  const direction = prevScroll !== undefined && throttledScroll > prevScroll ? "down" : "up";
+
+  useEffect(() => {
+    const handler = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  return <p>Scrolling {direction}</p>;
 }
 ```
 

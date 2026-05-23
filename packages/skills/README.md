@@ -22,12 +22,16 @@ This copies Allem SDK best practices and API reference into your project, making
 
 ## What's included
 
-- **SKILL.md** Overview, setup, conventions, and quick examples
-- **rules/hooks.md** All 8 utility hooks API and patterns
+- **SKILL.md** Overview, setup, conventions, and quick examples for all 9 packages
+- **rules/hooks.md** All 13 utility hooks API and patterns
 - **rules/ai.md** AI chat hooks, provider setup, server handler
+- **rules/agents.md** Agentic AI: tool loops, guardrails, memory, planning templates
 - **rules/forms.md** Form management, validators, field props
-- **rules/analytics.md** Analytics provider, tracking, identification
-- **rules/auth.md** Authentication, session management, protected routes
+- **rules/analytics.md** Analytics provider, tracking, adapters (Mixpanel, PostHog, Segment)
+- **rules/auth.md** Authentication, session management, adapters (Supabase, NextAuth, Clerk)
+- **rules/storage.md** Key-value storage with localStorage, cookies, memory adapters
+- **rules/notifications.md** Headless toast/notification system
+- **rules/realtime.md** WebSocket/SSE channels, presence, connection status
 
 ## Part of [Allem SDK](https://github.com/kingofmit/allem-sdk)
 

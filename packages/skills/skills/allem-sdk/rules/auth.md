@@ -132,6 +132,34 @@ Renders children only when authenticated. Shows fallback otherwise.
 </ProtectedRoute>
 ```
 
+## Built-in adapters
+
+Pre-built adapters for popular auth providers:
+
+```tsx
+import { supabaseAdapter, nextAuthAdapter, clerkAdapter } from "@allem-sdk/auth";
+```
+
+| Adapter | Usage | Description |
+|---------|-------|-------------|
+| `supabaseAdapter(supabase)` | Pass your Supabase client | Wraps `signInWithPassword`, reads session/user metadata |
+| `nextAuthAdapter(options?)` | `{ basePath?: string }` | Fetches from `/api/auth/session`. Works with NextAuth v4/v5 |
+| `clerkAdapter(clerk)` | Pass the Clerk instance | Read-only — sign-in handled by Clerk's `<SignIn />` component |
+
+```tsx
+// Supabase
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(url, key);
+<AuthProvider adapter={supabaseAdapter(supabase)}>
+
+// NextAuth (default basePath: "/api/auth")
+<AuthProvider adapter={nextAuthAdapter()}>
+<AuthProvider adapter={nextAuthAdapter({ basePath: "/api/auth" })}>
+
+// Clerk
+<AuthProvider adapter={clerkAdapter(clerk)}>
+```
+
 ## Best practices
 
 - `AuthProvider` calls `getSession()` on mount — use this to restore sessions from cookies/tokens
@@ -139,3 +167,4 @@ Renders children only when authenticated. Shows fallback otherwise.
 - `ProtectedRoute` is a convenience wrapper — for more control, use `useAuth()` directly
 - The `credentials` passed to `signIn` is a generic `Record<string, string>` — pass whatever your backend expects
 - Must be used within `<AuthProvider>` — throws an error if called outside the provider
+- Use built-in adapters when possible — they handle session parsing, token extraction, and user mapping

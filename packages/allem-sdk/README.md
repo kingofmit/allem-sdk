@@ -8,12 +8,12 @@
   <img src="https://img.shields.io/badge/react-19-61dafb" alt="React 19" />
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
   <img src="https://img.shields.io/badge/AI_SDK-v6-black" alt="AI SDK v6" />
-  <img src="https://img.shields.io/badge/tests-53_passing-brightgreen" alt="Tests" />
+  <img src="https://img.shields.io/badge/tests-96_passing-brightgreen" alt="Tests" />
 </p>
 
 # allem-sdk
 
-The complete Allem SDK for React. Hooks, AI, forms, analytics, and auth in a single install.
+The complete Allem SDK for React. AI agents, chat, hooks, forms, auth, analytics, storage, notifications, and realtime in a single install.
 
 ## Installation
 
@@ -24,12 +24,15 @@ npm install allem-sdk
 Or install individual packages:
 
 ```bash
-npm install @allem-sdk/hooks       # React hooks
-npm install @allem-sdk/ai          # AI chat & completions
-npm install @allem-sdk/agents      # Agentic AI with tool calling
-npm install @allem-sdk/forms       # Form management
-npm install @allem-sdk/analytics   # Analytics tracking
-npm install @allem-sdk/auth        # Authentication
+npm install @allem-sdk/hooks          # 13 React hooks
+npm install @allem-sdk/ai             # AI chat & completions
+npm install @allem-sdk/agents         # Agentic AI with tool calling
+npm install @allem-sdk/forms          # Form management
+npm install @allem-sdk/analytics      # Analytics tracking
+npm install @allem-sdk/auth           # Authentication
+npm install @allem-sdk/storage        # Key-value storage
+npm install @allem-sdk/notifications  # Toast notifications
+npm install @allem-sdk/realtime       # WebSocket/SSE
 ```
 
 ## Quick Start
@@ -49,12 +52,15 @@ import { useDebounce, useAllemChat, useForm, useAuth } from "allem-sdk";
 
 | Package | Description |
 |---------|-------------|
-| [`@allem-sdk/hooks`](https://www.npmjs.com/package/@allem-sdk/hooks) | 8 essential React hooks: useDebounce, useLocalStorage, useMediaQuery, and more |
+| [`@allem-sdk/hooks`](https://www.npmjs.com/package/@allem-sdk/hooks) | 13 React hooks: useDebounce, useFetch, useThrottle, useLocalStorage, and more |
 | [`@allem-sdk/ai`](https://www.npmjs.com/package/@allem-sdk/ai) | AI hooks built on Vercel AI SDK v6 with multi-provider chat & completions |
-| [`@allem-sdk/agents`](https://www.npmjs.com/package/@allem-sdk/agents) | Agentic AI with tool calling, status tracking, and typed tool definitions |
+| [`@allem-sdk/agents`](https://www.npmjs.com/package/@allem-sdk/agents) | Agentic AI with tool loops, guardrails, memory, and planning |
 | [`@allem-sdk/forms`](https://www.npmjs.com/package/@allem-sdk/forms) | Lightweight form management with 9 built-in validators |
-| [`@allem-sdk/analytics`](https://www.npmjs.com/package/@allem-sdk/analytics) | Provider-agnostic analytics. Works with Mixpanel, Segment, PostHog, etc. |
-| [`@allem-sdk/auth`](https://www.npmjs.com/package/@allem-sdk/auth) | Authentication helpers with session management and protected routes |
+| [`@allem-sdk/analytics`](https://www.npmjs.com/package/@allem-sdk/analytics) | Provider-agnostic analytics with Mixpanel, PostHog, Segment adapters |
+| [`@allem-sdk/auth`](https://www.npmjs.com/package/@allem-sdk/auth) | Authentication with Supabase, NextAuth, Clerk adapters |
+| [`@allem-sdk/storage`](https://www.npmjs.com/package/@allem-sdk/storage) | Key-value storage with localStorage, cookie, memory adapters |
+| [`@allem-sdk/notifications`](https://www.npmjs.com/package/@allem-sdk/notifications) | Headless toast/notification system |
+| [`@allem-sdk/realtime`](https://www.npmjs.com/package/@allem-sdk/realtime) | WebSocket/SSE abstraction with channels and presence |
 
 ## Features
 
