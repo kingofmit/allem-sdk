@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Developer SDK for React — AI hooks, form management, analytics, and more.",
-  "author": "Ahmed Allem <ahmed@allzem.com>",
+  "author": "Ahmed Allem",
   "license": "MIT",
   "repository": {
     "type": "git",
