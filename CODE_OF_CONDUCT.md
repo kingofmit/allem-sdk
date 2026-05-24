@@ -22,7 +22,7 @@ We pledge to make participation in this project a harassment-free experience for
 
 ## Enforcement
 
-Report unacceptable behavior to **ahmed@allzem.com**. All complaints will be reviewed and investigated promptly.
+Report unacceptable behavior to **ahmed@allzemhub.com**. All complaints will be reviewed and investigated promptly.
 
 ## Attribution
 
