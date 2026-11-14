@@ -1,0 +1,36 @@
+{
+  "title": "Allem SDK: Developer SDK for React",
+  "description": "Developer SDK for React — AI hooks, form management, analytics, and more. Built with React, Vercel AI SDK, and organized as a Turborepo monorepo with 11 packages. Companion to Allem UI.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Allem, Ahmed",
+      "orcid": "0009-0003-4937-5858"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "sdk",
+    "ai",
+    "hooks",
+    "forms",
+    "analytics",
+    "typescript",
+    "turborepo"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kingofmit/allem-sdk",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/kingofmit/allem-ui",
+      "relation": "isRelatedTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}
