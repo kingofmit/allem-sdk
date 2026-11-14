@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/typescript-strict-blue" alt="TypeScript" />
   <img src="https://img.shields.io/badge/AI_SDK-v6-black" alt="AI SDK v6" />
   <img src="https://img.shields.io/badge/tests-96_passing-brightgreen" alt="Tests" />
+  <a href="https://doi.org/10.5281/zenodo.24234439"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24234439.svg" alt="DOI" /></a>
 </p>
 
 The React SDK for modern apps. AI agents, chat, hooks, forms, auth, analytics, storage, notifications, and realtime — in one toolkit.
