@@ -20,6 +20,7 @@ The React SDK for modern apps. Hooks, AI, forms, analytics, and auth in one tool
 | [`allem-sdk`](./packages/allem-sdk) | Meta-package that installs everything | `npm i allem-sdk` |
 | [`@allem-sdk/hooks`](./packages/hooks) | Essential React hooks (useDebounce, useLocalStorage, useMediaQuery, ...) | `npm i @allem-sdk/hooks` |
 | [`@allem-sdk/ai`](./packages/ai) | AI hooks built on Vercel AI SDK v6 (multi-provider chat, completions) | `npm i @allem-sdk/ai` |
+| [`@allem-sdk/agents`](./packages/agents) | Agentic AI with tool calling, status tracking, and typed tool definitions | `npm i @allem-sdk/agents` |
 | [`@allem-sdk/forms`](./packages/forms) | Lightweight form management and validation | `npm i @allem-sdk/forms` |
 | [`@allem-sdk/analytics`](./packages/analytics) | Provider-agnostic analytics hooks | `npm i @allem-sdk/analytics` |
 | [`@allem-sdk/auth`](./packages/auth) | Authentication helpers (session, protected routes) | `npm i @allem-sdk/auth` |
