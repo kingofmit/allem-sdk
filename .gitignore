@@ -20,6 +20,14 @@ next-env.d.ts
 # Claude Code
 .claude/
 
+# AI tools
+.codeagento/
+.cursor/
+.aider/
+.continue/
+.copilot/
+AGENTS.md
+
 # IDE
 .vscode
 .idea
