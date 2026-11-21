@@ -8,6 +8,11 @@ export {
   useCopyToClipboard,
   useIntersectionObserver,
   useWindowSize,
+  useFetch,
+  useThrottle,
+  usePrevious,
+  useKeyPress,
+  useOnlineStatus,
 } from "@allem-sdk/hooks";
 
 // AI
@@ -20,6 +25,14 @@ export {
   useAgentTools,
   createAllemAgentHandler,
   createAllemTool,
+  createAllemGuardrail,
+  createMemoryAdapter,
+  thinkThenAct,
+  planExecuteVerify,
+  restrictAfter,
+  stepCountIs,
+  isLoopFinished,
+  hasToolCall,
 } from "@allem-sdk/agents";
 export type {
   UseAllemAgentOptions,
@@ -31,6 +44,8 @@ export type {
   AgentToolRegistration,
   AllemAgentHandlerConfig,
   AllemToolConfig,
+  AllemGuardrailConfig,
+  AgentMemoryAdapter,
 } from "@allem-sdk/agents";
 
 // Forms
@@ -64,6 +79,10 @@ export {
   useTrack,
   usePageView,
   useIdentify,
+  mixpanelAdapter,
+  posthogAdapter,
+  segmentAdapter,
+  consoleAdapter,
 } from "@allem-sdk/analytics";
 export type {
   AnalyticsAdapter,
@@ -76,6 +95,9 @@ export {
   useAuth,
   useSession,
   ProtectedRoute,
+  supabaseAdapter,
+  nextAuthAdapter,
+  clerkAdapter,
 } from "@allem-sdk/auth";
 export type {
   AuthAdapter,
@@ -87,3 +109,46 @@ export type {
   UseSessionReturn,
   ProtectedRouteProps,
 } from "@allem-sdk/auth";
+
+// Storage
+export {
+  StorageProvider,
+  useStorageAdapter,
+  useStorageItem,
+  localStorageAdapter,
+  sessionStorageAdapter,
+  cookieAdapter,
+  memoryAdapter,
+} from "@allem-sdk/storage";
+export type {
+  StorageAdapter,
+  StorageProviderProps,
+} from "@allem-sdk/storage";
+
+// Notifications
+export {
+  NotificationProvider,
+  useNotifications,
+  useNotify,
+} from "@allem-sdk/notifications";
+export type {
+  Notification,
+  NotificationType,
+  NotifyOptions,
+  NotificationProviderProps,
+} from "@allem-sdk/notifications";
+
+// Realtime
+export {
+  RealtimeProvider,
+  useRealtimeAdapter,
+  useChannel,
+  usePresence,
+  useConnectionStatus,
+} from "@allem-sdk/realtime";
+export type {
+  RealtimeAdapter,
+  RealtimeProviderProps,
+  ConnectionStatus,
+  PresenceMember,
+} from "@allem-sdk/realtime";

@@ -57,6 +57,34 @@ function ProductPage({ product }) {
 }
 ```
 
+## Built-in Adapters
+
+Pre-built adapters for popular analytics providers:
+
+```tsx
+import { mixpanelAdapter, posthogAdapter, segmentAdapter, consoleAdapter } from "@allem-sdk/analytics";
+```
+
+| Adapter | Usage | Description |
+|---------|-------|-------------|
+| `mixpanelAdapter(mixpanel)` | Pass your initialized Mixpanel instance | Tracks events, page views, and identifies users with `people.set` |
+| `posthogAdapter(posthog)` | Pass your initialized PostHog instance | Uses `capture` for events and `$pageview` for pages |
+| `segmentAdapter(analytics)` | Pass `window.analytics` or Analytics.js instance | Direct mapping to Segment's `track`, `page`, `identify` |
+| `consoleAdapter(prefix?)` | No dependencies | Logs all events to console. Great for development. |
+
+```tsx
+import mixpanel from "mixpanel-browser";
+import posthog from "posthog-js";
+
+mixpanel.init("YOUR_TOKEN");
+posthog.init("YOUR_KEY", { api_host: "https://app.posthog.com" });
+
+// Use one or many adapters simultaneously
+<AnalyticsProvider adapters={[mixpanelAdapter(mixpanel), posthogAdapter(posthog), consoleAdapter()]}>
+  <App />
+</AnalyticsProvider>
+```
+
 ## Exports
 
 | Export | Type | Description |
@@ -65,6 +93,10 @@ function ProductPage({ product }) {
 | `useTrack` | Hook | Returns a `track(event, properties)` function |
 | `usePageView` | Hook | Tracks a page view on mount |
 | `useIdentify` | Hook | Returns an `identify(userId, traits)` function |
+| `mixpanelAdapter` | Factory | Adapter for Mixpanel |
+| `posthogAdapter` | Factory | Adapter for PostHog |
+| `segmentAdapter` | Factory | Adapter for Segment / Analytics.js |
+| `consoleAdapter` | Factory | Console-logging adapter for development |
 
 ## Part of [Allem SDK](https://github.com/kingofmit/allem-sdk)
 

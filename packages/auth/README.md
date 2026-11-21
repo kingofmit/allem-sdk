@@ -62,6 +62,33 @@ function Dashboard() {
 }
 ```
 
+## Built-in Adapters
+
+Pre-built adapters for popular auth providers — no need to write your own:
+
+```tsx
+import { supabaseAdapter, nextAuthAdapter, clerkAdapter } from "@allem-sdk/auth";
+```
+
+| Adapter | Usage | Notes |
+|---------|-------|-------|
+| `supabaseAdapter(supabase)` | Pass your Supabase client | Wraps `signInWithPassword`, reads session/user |
+| `nextAuthAdapter(options?)` | `{ basePath?: string }` | Fetches from `/api/auth/session`. Works with v4/v5 |
+| `clerkAdapter(clerk)` | Pass the Clerk instance | Read-only — sign-in is handled by Clerk's `<SignIn />` |
+
+```tsx
+// Supabase
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(url, key);
+<AuthProvider adapter={supabaseAdapter(supabase)}>
+
+// NextAuth
+<AuthProvider adapter={nextAuthAdapter()}>
+
+// Clerk
+<AuthProvider adapter={clerkAdapter(clerk)}>
+```
+
 ## Exports
 
 | Export | Type | Description |
@@ -70,6 +97,9 @@ function Dashboard() {
 | `useAuth` | Hook | Returns `user`, `status`, `isAuthenticated`, `isLoading`, `signIn`, `signOut` |
 | `useSession` | Hook | Returns `session` object and `update` function |
 | `ProtectedRoute` | Component | Renders children only when authenticated, with fallback support |
+| `supabaseAdapter` | Factory | Adapter for Supabase auth |
+| `nextAuthAdapter` | Factory | Adapter for NextAuth.js |
+| `clerkAdapter` | Factory | Adapter for Clerk |
 
 ## Part of [Allem SDK](https://github.com/kingofmit/allem-sdk)
 

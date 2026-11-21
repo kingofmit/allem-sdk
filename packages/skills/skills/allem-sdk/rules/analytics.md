@@ -78,9 +78,37 @@ const identify = useIdentify();
 identify(user.id, { email: user.email, plan: "pro" });
 ```
 
+## Built-in adapters
+
+Pre-built adapter factories — pass your initialized SDK instance:
+
+```tsx
+import { mixpanelAdapter, posthogAdapter, segmentAdapter, consoleAdapter } from "@allem-sdk/analytics";
+```
+
+| Adapter | Usage | Description |
+|---------|-------|-------------|
+| `mixpanelAdapter(mixpanel)` | Pass initialized Mixpanel instance | Uses `track`, `identify`, `people.set` |
+| `posthogAdapter(posthog)` | Pass initialized PostHog instance | Uses `capture`, `identify` |
+| `segmentAdapter(analytics)` | Pass `window.analytics` or Analytics.js | Direct mapping to `track`, `page`, `identify` |
+| `consoleAdapter(prefix?)` | No dependencies | Logs all events to console. Default prefix: `"[analytics]"` |
+
+```tsx
+import mixpanel from "mixpanel-browser";
+import posthog from "posthog-js";
+
+mixpanel.init("YOUR_TOKEN");
+posthog.init("YOUR_KEY", { api_host: "https://app.posthog.com" });
+
+<AnalyticsProvider adapters={[mixpanelAdapter(mixpanel), posthogAdapter(posthog), consoleAdapter()]}>
+  <App />
+</AnalyticsProvider>
+```
+
 ## Best practices
 
-- Create a console-logging adapter for development: `track: (e, p) => console.log("[analytics]", e, p)`
+- Use `consoleAdapter()` in development to see all events in the console
 - Adapters are stored in a ref — changing the array doesn't cause re-renders
 - Use `usePageView` at the top of page components for automatic page tracking
 - Keep event names consistent across your app (e.g. `"Sign Up"`, `"Add to Cart"`, `"Purchase"`)
+- All adapters receive every event — use multiple adapters to send to multiple providers simultaneously

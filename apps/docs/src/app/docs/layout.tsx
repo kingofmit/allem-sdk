@@ -37,6 +37,7 @@ const navigation = [
     title: "Agents",
     items: [
       { title: "Overview", href: "/docs/agents" },
+      { title: "Getting Started", href: "/docs/agents/getting-started" },
       { title: "useAllemAgent", href: "/docs/agents/use-allem-agent" },
       { title: "AgentProvider", href: "/docs/agents/agent-provider" },
       { title: "useAgentTools", href: "/docs/agents/use-agent-tools" },

@@ -42,6 +42,21 @@
       "types": "./dist/agents.d.ts",
       "import": "./dist/agents.mjs",
       "require": "./dist/agents.js"
+    },
+    "./storage": {
+      "types": "./dist/storage.d.ts",
+      "import": "./dist/storage.mjs",
+      "require": "./dist/storage.js"
+    },
+    "./notifications": {
+      "types": "./dist/notifications.d.ts",
+      "import": "./dist/notifications.mjs",
+      "require": "./dist/notifications.js"
+    },
+    "./realtime": {
+      "types": "./dist/realtime.d.ts",
+      "import": "./dist/realtime.mjs",
+      "require": "./dist/realtime.js"
     }
   },
   "files": [
@@ -59,7 +74,10 @@
     "@allem-sdk/forms": "workspace:*",
     "@allem-sdk/analytics": "workspace:*",
     "@allem-sdk/auth": "workspace:*",
-    "@allem-sdk/agents": "workspace:*"
+    "@allem-sdk/agents": "workspace:*",
+    "@allem-sdk/storage": "workspace:*",
+    "@allem-sdk/notifications": "workspace:*",
+    "@allem-sdk/realtime": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

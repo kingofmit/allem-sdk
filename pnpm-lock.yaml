@@ -130,6 +130,15 @@ importers:
       '@allem-sdk/hooks':
         specifier: workspace:*
         version: link:../hooks
+      '@allem-sdk/notifications':
+        specifier: workspace:*
+        version: link:../notifications
+      '@allem-sdk/realtime':
+        specifier: workspace:*
+        version: link:../realtime
+      '@allem-sdk/storage':
+        specifier: workspace:*
+        version: link:../storage
       react:
         specifier: '>=18.0.0'
         version: 19.0.0
@@ -226,6 +235,87 @@ importers:
         version: 3.0.0(jsdom@25.0.0)
 
   packages/hooks:
+    devDependencies:
+      '@testing-library/react':
+        specifier: ^16.0.0
+        version: 16.0.0(@testing-library/dom@10.4.1)(@types/react@19.0.0)(react-dom@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.0.0
+      jsdom:
+        specifier: ^25.0.0
+        version: 25.0.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      tsup:
+        specifier: ^8.4.0
+        version: 8.4.0(typescript@5.8.2)
+      typescript:
+        specifier: ^5.8.0
+        version: 5.8.2
+      vitest:
+        specifier: ^3.0.0
+        version: 3.0.0(jsdom@25.0.0)
+
+  packages/notifications:
+    devDependencies:
+      '@testing-library/react':
+        specifier: ^16.0.0
+        version: 16.0.0(@testing-library/dom@10.4.1)(@types/react@19.0.0)(react-dom@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.0.0
+      jsdom:
+        specifier: ^25.0.0
+        version: 25.0.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      tsup:
+        specifier: ^8.4.0
+        version: 8.4.0(typescript@5.8.2)
+      typescript:
+        specifier: ^5.8.0
+        version: 5.8.2
+      vitest:
+        specifier: ^3.0.0
+        version: 3.0.0(jsdom@25.0.0)
+
+  packages/realtime:
+    devDependencies:
+      '@testing-library/react':
+        specifier: ^16.0.0
+        version: 16.0.0(@testing-library/dom@10.4.1)(@types/react@19.0.0)(react-dom@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.0.0
+      jsdom:
+        specifier: ^25.0.0
+        version: 25.0.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      tsup:
+        specifier: ^8.4.0
+        version: 8.4.0(typescript@5.8.2)
+      typescript:
+        specifier: ^5.8.0
+        version: 5.8.2
+      vitest:
+        specifier: ^3.0.0
+        version: 3.0.0(jsdom@25.0.0)
+
+  packages/storage:
     devDependencies:
       '@testing-library/react':
         specifier: ^16.0.0
